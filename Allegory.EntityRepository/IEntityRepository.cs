@@ -12,6 +12,7 @@ namespace Allegory.EntityRepository
     public interface IEntityRepository<T> where T : class, IEntity, new()
     {
         T Get(Expression<Func<T, bool>> filter);
+        T GetSingle(Expression<Func<T, bool>> filter);
         List<T> GetList(Expression<Func<T, bool>> filter = null);
 
         T Add(T entity);

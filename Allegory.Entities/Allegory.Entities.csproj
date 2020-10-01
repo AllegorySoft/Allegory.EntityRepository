@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB36C644-507A-424A-BC60-AFF8312D3273}</ProjectGuid>
+    <ProjectGuid>{BA911DB3-1270-4324-8BC4-8A7E40751801}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Allegory.Entities</RootNamespace>
@@ -43,15 +43,17 @@
   <ItemGroup>
     <Compile Include="Abstract\IActive.cs" />
     <Compile Include="Abstract\IComplexType.cs" />
+    <Compile Include="Abstract\ICreatedBy.cs" />
     <Compile Include="Abstract\ICreatedDate.cs" />
     <Compile Include="Abstract\IDto.cs" />
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Abstract\IKey.cs" />
+    <Compile Include="Abstract\IModifiedBy.cs" />
     <Compile Include="Abstract\IModifiedDate.cs" />
+    <Compile Include="Abstract\IUserIdentity.cs" />
     <Compile Include="Concrete\BusinessException.cs" />
     <Compile Include="Concrete\PagedResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

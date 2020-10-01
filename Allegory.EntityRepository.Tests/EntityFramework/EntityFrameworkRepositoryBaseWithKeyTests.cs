@@ -13,6 +13,9 @@ namespace Allegory.EntityRepository.Tests.EntityFramework
     [TestClass]
     public class EntityFrameworkRepositoryBaseWithKeyTests
     {
+        /// <summary>
+        /// !!!UnitTest project getting error on VS19 but in application works fine
+        /// </summary>
         protected TestContext TestContext { get; set; }
         private static IEntityRepository<Table1, int> EntityRepository { get; set; }
 

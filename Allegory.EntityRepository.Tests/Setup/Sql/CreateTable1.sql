@@ -9,5 +9,7 @@ CREATE TABLE Table1 (
 	ModifiedDate DATETIME,
 	Active BIT NOT NULL,
 	CustomField1 VARCHAR(50),
-	CustomField2 FLOAT
+	CustomField2 FLOAT,
+	CreatedBy INT NOT NULL,
+	ModifiedBy INT NULL
 )

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Allegory.EntityRepository.Tests.Setup.Entities;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -20,6 +21,7 @@ namespace Allegory.EntityRepository.Tests.Setup
         {
             CreateDatabaseIfNotExists();
             CreateTableIfNotExists();
+            SetPrincipal();
         }
         [AssemblyCleanup]
         public static void AssemblyCleanup()
@@ -66,6 +68,16 @@ namespace Allegory.EntityRepository.Tests.Setup
                     return sr.ReadToEnd();
                 }
             }
+        }
+        private static void SetPrincipal()
+        {
+            var identity = new UserAuth
+            {
+                UserRef = 10
+            };
+            var principal = new System.Security.Principal.GenericPrincipal(identity, null);
+            //System.Threading.Thread.CurrentPrincipal = principal;
+            AppDomain.CurrentDomain.SetThreadPrincipal(principal);
         }
     }
 }

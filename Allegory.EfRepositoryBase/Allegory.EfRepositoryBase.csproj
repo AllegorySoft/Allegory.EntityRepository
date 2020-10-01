@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83E8569B-9C8B-4DF8-8013-C905757BAB0F}</ProjectGuid>
+    <ProjectGuid>{411CB812-A277-45C2-B6A6-23541E9714A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Allegory.EfRepositoryBase</RootNamespace>
@@ -43,7 +43,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,18 +57,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Allegory.Entities\Allegory.Entities.csproj">
-      <Project>{FB36C644-507A-424A-BC60-AFF8312D3273}</Project>
+      <Project>{BA911DB3-1270-4324-8BC4-8A7E40751801}</Project>
       <Name>Allegory.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Allegory.EntityRepository\Allegory.EntityRepository.csproj">
-      <Project>{287C8AE7-3E08-4011-B3D2-FDF5597367FB}</Project>
+      <Project>{B291C6EB-2517-4A5D-85C8-AE44ECFA6C4C}</Project>
       <Name>Allegory.EntityRepository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

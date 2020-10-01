@@ -18,6 +18,7 @@ namespace Allegory.EntityRepository
         protected EntityRepositoryBase<TEntity> EntityRepositoryBase { get; set; }
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter) => EntityRepositoryBase.Get(filter);
+        public TEntity GetSingle(Expression<Func<TEntity, bool>> filter) => EntityRepositoryBase.GetSingle(filter);
         public List<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null) => EntityRepositoryBase.GetList(filter);
 
         public TEntity Add(TEntity entity) => EntityRepositoryBase.Add(entity);
@@ -31,8 +32,8 @@ namespace Allegory.EntityRepository
         public PagedResult<TEntity> GetPagedList<TOrder>(Expression<Func<TEntity, TOrder>> order, int page = 1, int pageSize = 20, Expression<Func<TEntity, bool>> filter = null, bool desc = false) => EntityRepositoryBase.GetPagedList(order, page, pageSize, filter, desc);
         #endregion
 
-        public abstract TEntity GetById(TKey Id);
-        public abstract List<TEntity> GetById(List<TKey> Ids);
+        public TEntity GetById(TKey id) => GetSingle(f => f.Id.Equals(id));
+        public List<TEntity> GetById(HashSet<TKey> ids) => GetList(f => ids.Contains(f.Id));
 
         public TEntity AddOrUpdate(TEntity entity)
         {
@@ -58,8 +59,8 @@ namespace Allegory.EntityRepository
                 }
             }
         }
-        public abstract void DeleteById(TKey Id);
-        public void DeleteById(List<TKey> Ids)=> Delete(GetById(Ids));
+        public void DeleteById(TKey id) => Delete(GetById(id));
+        public void DeleteById(HashSet<TKey> ids) => Delete(GetById(ids));
 
         public abstract PagedResult<TEntity> GetPagedList(int page = 1, int pageSize = 20, Expression<Func<TEntity, bool>> filter = null, bool desc = false);
     }

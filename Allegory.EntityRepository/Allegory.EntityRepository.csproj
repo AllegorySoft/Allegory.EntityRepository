@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{287C8AE7-3E08-4011-B3D2-FDF5597367FB}</ProjectGuid>
+    <ProjectGuid>{B291C6EB-2517-4A5D-85C8-AE44ECFA6C4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Allegory.EntityRepository</RootNamespace>
@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Allegory.Entities\Allegory.Entities.csproj">
-      <Project>{FB36C644-507A-424A-BC60-AFF8312D3273}</Project>
+      <Project>{ba911db3-1270-4324-8bc4-8a7e40751801}</Project>
       <Name>Allegory.Entities</Name>
     </ProjectReference>
   </ItemGroup>

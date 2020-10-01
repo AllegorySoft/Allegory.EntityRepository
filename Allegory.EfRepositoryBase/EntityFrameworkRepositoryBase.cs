@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Transactions;
 using System.Data.Entity.Migrations;
 
 namespace Allegory.EfRepositoryBase
@@ -19,7 +18,14 @@ namespace Allegory.EfRepositoryBase
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter);
+                return context.Set<TEntity>().AsNoTracking().FirstOrDefault(filter);
+            }
+        }
+        public override TEntity GetSingle(Expression<Func<TEntity, bool>> filter)
+        {
+            using (var context = new TContext())
+            {
+                return context.Set<TEntity>().AsNoTracking().SingleOrDefault(filter);
             }
         }
         public override List<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null)
@@ -27,8 +33,8 @@ namespace Allegory.EfRepositoryBase
             using (var context = new TContext())
             {
                 return filter == null
-                    ? context.Set<TEntity>().ToList()
-                    : context.Set<TEntity>().Where(filter).ToList();
+                    ? context.Set<TEntity>().AsNoTracking().ToList()
+                    : context.Set<TEntity>().AsNoTracking().Where(filter).ToList();
             }
         }
 
@@ -36,8 +42,7 @@ namespace Allegory.EfRepositoryBase
         {
             using (var context = new TContext())
             {
-                var entry = context.Entry(entity);
-                entry.State = EntityState.Added;
+                context.Entry(entity).State = EntityState.Added;
                 context.SaveChanges();
                 return entity;
             }
@@ -51,6 +56,8 @@ namespace Allegory.EfRepositoryBase
 
                 if (IsAssignableFromICreatedDate)
                     entry.Property(x => ((ICreatedDate)x).CreatedDate).IsModified = false;
+                if(IsAssignableFromICreatedBy)
+                    entry.Property("CreatedBy").IsModified = false;
 
                 context.SaveChanges();
                 return entity;
@@ -60,8 +67,7 @@ namespace Allegory.EfRepositoryBase
         {
             using (var context = new TContext())
             {
-                var entry = context.Entry(entity);
-                entry.State = EntityState.Deleted;
+                context.Entry(entity).State = EntityState.Deleted;
                 context.SaveChanges();
             }
         }
@@ -80,17 +86,18 @@ namespace Allegory.EfRepositoryBase
             using (var context = new TContext())
             {
                 context.Configuration.AutoDetectChangesEnabled = false;
-                var dbSet = context.Set<TEntity>();
 
                 for (int i = 0; i < entities.Count; i++)
                 {
-                    dbSet.Attach(entities[i]);
                     context.Entry(entities[i]).State = EntityState.Modified;
                 }
 
                 if (IsAssignableFromICreatedDate)
                     for (int i = 0; i < entities.Count; i++)
                         context.Entry(entities[i]).Property(y => ((ICreatedDate)y).CreatedDate).IsModified = false;
+                if(IsAssignableFromICreatedBy)
+                    for (int i = 0; i < entities.Count; i++)
+                        context.Entry(entities[i]).Property("CreatedBy").IsModified = false;
 
                 context.SaveChanges();
                 return entities;
@@ -109,14 +116,8 @@ namespace Allegory.EfRepositoryBase
         {
             using (var context = new TContext())
             {
-                var query = (IQueryable<TEntity>)context.Set<TEntity>();
-                if (filter != null)
-                    query = query.Where(filter);
-                if (desc)
-                    query = query.OrderByDescending(order);
-                else
-                    query = query.OrderBy(order);
-                return EntityRepositoryBase.GetPaged(query, page, pageSize);
+                var query = (IQueryable<TEntity>)context.Set<TEntity>().AsNoTracking();
+                return EntityRepositoryBase.GetPaged(query, order, page, pageSize, filter, desc);
             }
         }
     }

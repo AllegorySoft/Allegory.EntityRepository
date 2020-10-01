@@ -13,6 +13,9 @@ namespace Allegory.EntityRepository.Tests.EntityFramework
     [TestClass]
     public class EntityFrameworkRepositoryBaseTests
     {
+        /// <summary>
+        /// !!!UnitTest project getting error on VS19 but in application works fine
+        /// </summary>
         protected TestContext TestContext { get; set; }
         private static IEntityRepository<Table1> EntityRepository { get; set; }
 
@@ -57,6 +60,26 @@ namespace Allegory.EntityRepository.Tests.EntityFramework
             Assert.AreEqual(record.CustomField1, result.CustomField1);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(System.InvalidOperationException))]
+        public void GetSingle()
+        {
+            Table1 record = new Table1
+            {
+                CustomField1 = "getRecord",
+                CustomField2 = 12,
+            };
+            Table1 record2 = new Table1
+            {
+                CustomField1 = "getRecord",
+                CustomField2 = 12,
+            };
+
+            EntityRepository.Add(record);
+            EntityRepository.Add(record2);
+            Table1 result = EntityRepository.GetSingle(f => f.CustomField1== "getRecord");
+        }
+
         [TestMethod, Description("When record updated auto fill modified date")]
         public void Update()
         {
@@ -64,13 +87,15 @@ namespace Allegory.EntityRepository.Tests.EntityFramework
             {
                 CustomField1 = "addedRecord",
 
-                ModifiedDate = DateTime.Now
+                ModifiedDate = DateTime.Now,
+                ModifiedBy = 15
             };
 
             EntityRepository.Add(record);
             Assert.IsNull(record.ModifiedDate);
 
             record.CustomField1 = "updatedRecord";
+            record.ModifiedBy = 15;
             EntityRepository.Update(record);
 
             Assert.IsNotNull(record.ModifiedDate);

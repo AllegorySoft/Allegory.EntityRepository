@@ -6,7 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85579458-1EDE-49D0-B68D-6A8F42FB326C}</ProjectGuid>
+    <ProjectGuid>{1CFC00EA-7E98-4322-84F6-5778E180AF34}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Allegory.EntityRepository.Tests</RootNamespace>
@@ -59,32 +59,34 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityFramework\EntityFrameworkRepositoryBaseWithKeyTests.cs" />
-    <Compile Include="Setup\Entities\EntityBase.cs" />
-    <Compile Include="Setup\Entities\Table1.cs" />
     <Compile Include="EntityFramework\Configuration\Mappings\Table1.cs" />
     <Compile Include="EntityFramework\Configuration\TestContext.cs" />
     <Compile Include="EntityFramework\EntityFrameworkRepositoryBaseTests.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkRepositoryBaseWithKeyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\Entities\EntityBase.cs" />
+    <Compile Include="Setup\Entities\Table1.cs" />
+    <Compile Include="Setup\Entities\UserAuth.cs" />
     <Compile Include="Setup\Setup.cs" />
-    <EmbeddedResource Include="Setup\Sql\CreateTable1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Setup\Sql\CreateTable1.sql" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Allegory.EfRepositoryBase\Allegory.EfRepositoryBase.csproj">
-      <Project>{83e8569b-9c8b-4df8-8013-c905757bab0f}</Project>
+      <Project>{411cb812-a277-45c2-b6a6-23541e9714a7}</Project>
       <Name>Allegory.EfRepositoryBase</Name>
     </ProjectReference>
     <ProjectReference Include="..\Allegory.Entities\Allegory.Entities.csproj">
-      <Project>{fb36c644-507a-424a-bc60-aff8312d3273}</Project>
+      <Project>{BA911DB3-1270-4324-8BC4-8A7E40751801}</Project>
       <Name>Allegory.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Allegory.EntityRepository\Allegory.EntityRepository.csproj">
-      <Project>{287c8ae7-3e08-4011-b3d2-fdf5597367fb}</Project>
+      <Project>{b291c6eb-2517-4a5d-85c8-ae44ecfa6c4c}</Project>
       <Name>Allegory.EntityRepository</Name>
     </ProjectReference>
   </ItemGroup>
