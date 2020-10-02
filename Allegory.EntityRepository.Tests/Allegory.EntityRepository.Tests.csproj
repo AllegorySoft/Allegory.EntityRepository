@@ -77,13 +77,13 @@
     <EmbeddedResource Include="Setup\Sql\CreateTable1.sql" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Allegory.EfRepositoryBase\Allegory.EfRepositoryBase.csproj">
-      <Project>{411cb812-a277-45c2-b6a6-23541e9714a7}</Project>
-      <Name>Allegory.EfRepositoryBase</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Allegory.Entities\Allegory.Entities.csproj">
       <Project>{BA911DB3-1270-4324-8BC4-8A7E40751801}</Project>
       <Name>Allegory.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Allegory.EntityFrameworkRepository\Allegory.EntityFrameworkRepository.csproj">
+      <Project>{3d9f8d65-4f26-4847-8047-cb739ac0e397}</Project>
+      <Name>Allegory.EntityFrameworkRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Allegory.EntityRepository\Allegory.EntityRepository.csproj">
       <Project>{b291c6eb-2517-4a5d-85c8-ae44ecfa6c4c}</Project>

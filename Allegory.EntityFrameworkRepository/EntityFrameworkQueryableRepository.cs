@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Allegory.EfRepositoryBase
+namespace Allegory.EntityFrameworkRepository
 {
-    public class EfQueryableRepository<T> : IQueryableRepository<T> where T : class, IEntity, new()
+    public class EntityFrameworkQueryableRepository<T> : IQueryableRepository<T> where T : class, IEntity, new()
     {
         DbContext _context;
         DbSet<T> _entities;
-        public EfQueryableRepository(DbContext context)
+        public EntityFrameworkQueryableRepository(DbContext context)
         {
             _context = context;
         }

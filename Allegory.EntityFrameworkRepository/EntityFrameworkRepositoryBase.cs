@@ -8,7 +8,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Data.Entity.Migrations;
 
-namespace Allegory.EfRepositoryBase
+namespace Allegory.EntityFrameworkRepository
 {
     public class EntityFrameworkRepositoryBase<TEntity, TContext> : EntityRepositoryBase<TEntity>, IEntityRepository<TEntity>
       where TEntity : class, IEntity, new()
@@ -85,7 +85,7 @@ namespace Allegory.EfRepositoryBase
         {
             using (var context = new TContext())
             {
-                context.Configuration.AutoDetectChangesEnabled = false;
+                context.Configuration.AutoDetectChangesEnabled = false;//Performansı artırıyor
 
                 for (int i = 0; i < entities.Count; i++)
                 {

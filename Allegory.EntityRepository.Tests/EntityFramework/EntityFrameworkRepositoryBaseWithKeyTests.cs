@@ -1,4 +1,4 @@
-﻿using Allegory.EfRepositoryBase;
+﻿using Allegory.EntityFrameworkRepository;
 using Allegory.EntityRepository.Tests.EntityFramework.Configuration;
 using Allegory.EntityRepository.Tests.Setup.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

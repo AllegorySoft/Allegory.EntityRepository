@@ -8,7 +8,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Allegory.EfRepositoryBase
+namespace Allegory.EntityFrameworkRepository
 {
     public class EntityFrameworkRepositoryBaseWithKey<TEntity, TKey, TContext> : EntityRepositoryBaseWithKey<TEntity, TKey>, IEntityRepository<TEntity, TKey>
         where TEntity : class, IKey<TKey>, new()
