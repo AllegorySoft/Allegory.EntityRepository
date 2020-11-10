@@ -1,10 +1,10 @@
-﻿using Allegory.Entities.Abstract;
-using Allegory.Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Allegory.Entities.Abstract;
+using Allegory.Entities.Concrete;
 
-namespace Allegory.EntityRepository
+namespace Allegory.EntityRepository.Abstract
 {
     public interface IEntityRepository<T, TKey> : IEntityRepository<T>
         where T : class, IKey<TKey>, new()

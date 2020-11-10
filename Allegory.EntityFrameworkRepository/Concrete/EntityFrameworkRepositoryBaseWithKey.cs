@@ -1,14 +1,12 @@
-﻿using Allegory.Entities.Abstract;
-using Allegory.Entities.Concrete;
-using Allegory.EntityRepository;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
+using Allegory.Entities.Abstract;
+using Allegory.Entities.Concrete;
+using Allegory.EntityRepository.Abstract;
 
-namespace Allegory.EntityFrameworkRepository
+namespace Allegory.EntityFrameworkRepository.Concrete
 {
     public class EntityFrameworkRepositoryBaseWithKey<TEntity, TKey, TContext> : EntityRepositoryBaseWithKey<TEntity, TKey>, IEntityRepository<TEntity, TKey>
         where TEntity : class, IKey<TKey>, new()
@@ -25,7 +23,7 @@ namespace Allegory.EntityFrameworkRepository
             using (var context = new TContext())
             {
                 var query = (IQueryable<TEntity>)context.Set<TEntity>().AsNoTracking();
-                return Allegory.EntityRepository.EntityRepositoryBase.GetPaged(query, o => o.Id, page, pageSize, filter, desc);
+                return Allegory.EntityRepository.Abstract.EntityRepositoryBase.GetPaged(query, o => o.Id, page, pageSize, filter, desc);
             }
         }
     }

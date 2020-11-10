@@ -1,13 +1,9 @@
-﻿using Allegory.Entities.Abstract;
-using Allegory.EntityRepository;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Allegory.Entities.Abstract;
+using Allegory.EntityRepository.Abstract;
 
-namespace Allegory.EntityFrameworkRepository
+namespace Allegory.EntityFrameworkRepository.Concrete
 {
     public class EntityFrameworkQueryableRepository<T> : IQueryableRepository<T> where T : class, IEntity, new()
     {

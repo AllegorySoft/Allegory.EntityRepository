@@ -1,12 +1,8 @@
-﻿using Allegory.EntityFrameworkRepository;
+﻿using Allegory.EntityFrameworkRepository.Concrete;
+using Allegory.EntityRepository.Abstract;
 using Allegory.EntityRepository.Tests.EntityFramework.Configuration;
 using Allegory.EntityRepository.Tests.Setup.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Allegory.EntityRepository.Tests.EntityFramework
 {

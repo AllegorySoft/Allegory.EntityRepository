@@ -1,14 +1,12 @@
-﻿using Allegory.Entities.Abstract;
-using Allegory.Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Transactions;
+using Allegory.Entities.Abstract;
+using Allegory.Entities.Concrete;
 
-namespace Allegory.EntityRepository
+namespace Allegory.EntityRepository.Abstract
 {
     public abstract class EntityRepositoryBaseWithKey<TEntity, TKey> : IEntityRepository<TEntity, TKey>
         where TEntity : class, IKey<TKey>, new()

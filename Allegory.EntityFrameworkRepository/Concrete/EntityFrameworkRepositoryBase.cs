@@ -1,14 +1,13 @@
-﻿using Allegory.Entities.Abstract;
-using Allegory.Entities.Concrete;
-using Allegory.EntityRepository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Data.Entity.Migrations;
+using Allegory.Entities.Abstract;
+using Allegory.Entities.Concrete;
+using Allegory.EntityRepository.Abstract;
 
-namespace Allegory.EntityFrameworkRepository
+namespace Allegory.EntityFrameworkRepository.Concrete
 {
     public class EntityFrameworkRepositoryBase<TEntity, TContext> : EntityRepositoryBase<TEntity>, IEntityRepository<TEntity>
       where TEntity : class, IEntity, new()

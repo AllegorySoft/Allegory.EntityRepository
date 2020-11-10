@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Allegory.EntityRepository.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityRepositoryBase.cs" />
-    <Compile Include="EntityRepositoryBaseWithKey.cs" />
-    <Compile Include="IEntityRepository.cs" />
-    <Compile Include="IEntityRepositoryWithKey.cs" />
-    <Compile Include="IQueryableRepository.cs" />
+    <Compile Include="Abstract\EntityRepositoryBase.cs" />
+    <Compile Include="Abstract\EntityRepositoryBaseWithKey.cs" />
+    <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\IEntityRepositoryWithKey.cs" />
+    <Compile Include="Abstract\IQueryableRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +60,12 @@
       <Project>{ba911db3-1270-4324-8bc4-8a7e40751801}</Project>
       <Name>Allegory.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Allegory.EntityRepository.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
