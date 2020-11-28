@@ -2,7 +2,7 @@
 
 namespace Allegory.Standart.Entities.Abstract
 {
-    public interface IModifiedBy<TKey> : IKey<TKey> where TKey : IEquatable<TKey>
+    public interface IModifiedBy<TKey> : IEntity 
     {
         TKey ModifiedBy { get; set; }
     }

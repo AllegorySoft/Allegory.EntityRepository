@@ -2,8 +2,8 @@
 
 namespace Allegory.Standart.Entities.Abstract
 {
-    public interface ICreatedBy<TKey> : IKey<TKey> where TKey : IEquatable<TKey>
+    public interface ICreatedBy<TKey> : IEntity 
     {
-         TKey CreatedBy { get; set; }
+        TKey CreatedBy { get; set; }
     }
 }

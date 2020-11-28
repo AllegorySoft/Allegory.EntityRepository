@@ -15,7 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetFramework", "NetFramewor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetStandart", "NetStandart", "{F3986585-8F14-4BC6-ACBC-BD55B945D513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.Standart.Entities", "Allegory.Standart.Entities\Allegory.Standart.Entities.csproj", "{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.Standart.Entities", "Allegory.Standart.Entities\Allegory.Standart.Entities.csproj", "{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NET5", "NET5", "{00384AD5-5AAA-4F8A-A1A4-1594D3E69B58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.Standart.EntityRepository", "Allegory.Standart.EntityRepository\Allegory.Standart.EntityRepository.csproj", "{11CE9B76-4D0C-4BED-83DF-87048A358256}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.NET.EntityRepository.Tests", "Allegory.NET.EntityRepository.Tests\Allegory.NET.EntityRepository.Tests.csproj", "{CFC6A19E-0981-498C-A79B-F392D0CBCCA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,14 @@ Global
 		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CE9B76-4D0C-4BED-83DF-87048A358256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CE9B76-4D0C-4BED-83DF-87048A358256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CE9B76-4D0C-4BED-83DF-87048A358256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CE9B76-4D0C-4BED-83DF-87048A358256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC6A19E-0981-498C-A79B-F392D0CBCCA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC6A19E-0981-498C-A79B-F392D0CBCCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC6A19E-0981-498C-A79B-F392D0CBCCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC6A19E-0981-498C-A79B-F392D0CBCCA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +67,8 @@ Global
 		{1CFC00EA-7E98-4322-84F6-5778E180AF34} = {587244E6-0E0B-42B0-B86C-EC70FFB8C810}
 		{3D9F8D65-4F26-4847-8047-CB739AC0E397} = {587244E6-0E0B-42B0-B86C-EC70FFB8C810}
 		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B} = {F3986585-8F14-4BC6-ACBC-BD55B945D513}
+		{11CE9B76-4D0C-4BED-83DF-87048A358256} = {F3986585-8F14-4BC6-ACBC-BD55B945D513}
+		{CFC6A19E-0981-498C-A79B-F392D0CBCCA9} = {00384AD5-5AAA-4F8A-A1A4-1594D3E69B58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A05B04A4-CE86-4AF4-BC20-D27A84CAC958}
