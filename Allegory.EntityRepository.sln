@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.EntityRepository", "Allegory.EntityRepository\Allegory.EntityRepository.csproj", "{B291C6EB-2517-4A5D-85C8-AE44ECFA6C4C}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.EntityRepository.Tests", "Allegory.EntityRepository.Tests\Allegory.EntityRepository.Tests.csproj", "{1CFC00EA-7E98-4322-84F6-5778E180AF34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.EntityFrameworkRepository", "Allegory.EntityFrameworkRepository\Allegory.EntityFrameworkRepository.csproj", "{3D9F8D65-4F26-4847-8047-CB739AC0E397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetFramework", "NetFramework", "{587244E6-0E0B-42B0-B86C-EC70FFB8C810}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetStandart", "NetStandart", "{F3986585-8F14-4BC6-ACBC-BD55B945D513}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.Standart.Entities", "Allegory.Standart.Entities\Allegory.Standart.Entities.csproj", "{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,20 @@ Global
 		{3D9F8D65-4F26-4847-8047-CB739AC0E397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D9F8D65-4F26-4847-8047-CB739AC0E397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D9F8D65-4F26-4847-8047-CB739AC0E397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B291C6EB-2517-4A5D-85C8-AE44ECFA6C4C} = {587244E6-0E0B-42B0-B86C-EC70FFB8C810}
+		{BA911DB3-1270-4324-8BC4-8A7E40751801} = {587244E6-0E0B-42B0-B86C-EC70FFB8C810}
+		{1CFC00EA-7E98-4322-84F6-5778E180AF34} = {587244E6-0E0B-42B0-B86C-EC70FFB8C810}
+		{3D9F8D65-4F26-4847-8047-CB739AC0E397} = {587244E6-0E0B-42B0-B86C-EC70FFB8C810}
+		{3E3C9FD8-0E96-47A6-829F-7D84E80E3A7B} = {F3986585-8F14-4BC6-ACBC-BD55B945D513}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A05B04A4-CE86-4AF4-BC20-D27A84CAC958}
