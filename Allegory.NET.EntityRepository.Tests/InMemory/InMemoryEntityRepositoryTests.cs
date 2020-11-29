@@ -36,14 +36,14 @@ namespace Allegory.NET.EntityRepository.Tests.Mock
         {
             Table1 record = new Table1
             {
-                CustomField1 = "getRecord",
+                CustomField1 = Guid.NewGuid().ToString(),
                 CustomField2 = 12,
             };
 
             EntityRepository.Add(record);
-            Table1 result = EntityRepository.Get(f => f.Id == record.Id);
+            Table1 result = EntityRepository.Get(f => f.CustomField1 == record.CustomField1);
 
-            Assert.AreEqual(record.CustomField1, result.CustomField1);
+            Assert.AreEqual(record.CustomField2, result.CustomField2);
         }
 
         [TestMethod]
@@ -97,7 +97,7 @@ namespace Allegory.NET.EntityRepository.Tests.Mock
 
             var addedRecord = EntityRepository.Add(record);
             EntityRepository.Delete(record);
-            Table1 getById = EntityRepository.Get(f => f.Id == record.Id);
+            Table1 getById = EntityRepository.Get(f => f.CustomField1 == record.CustomField1);
 
             Assert.IsNull(getById);
         }
