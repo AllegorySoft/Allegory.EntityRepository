@@ -4,7 +4,7 @@ using Allegory.Standart.EntityRepository.Abstract;
 using Allegory.Standart.EntityRepository.Concrete;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Allegory.NET.EntityRepository.Tests.Mock
+namespace Allegory.NET.EntityRepository.Tests.InMemory
 {
     [TestClass]
     public class InMemoryEntityRepositoryTests
