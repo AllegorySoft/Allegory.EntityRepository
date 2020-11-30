@@ -5,6 +5,11 @@
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>Allegory.Standart.EntityRepository.pfx</AssemblyOriginatorKeyFile>
+    <RepositoryUrl>https://github.com/AllegorySoft/Allegory.EntityRepository.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Company>AllegorySoft</Company>
+    <Authors>AllegorySoft</Authors>
+    <Description>Allegory.Standart.EntityRepository</Description>
   </PropertyGroup>
 
   <ItemGroup>

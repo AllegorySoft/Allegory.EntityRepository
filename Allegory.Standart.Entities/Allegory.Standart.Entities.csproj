@@ -7,6 +7,10 @@
     <AssemblyOriginatorKeyFile>Allegory.Standart.Entities.pfx</AssemblyOriginatorKeyFile>
     <Company>AllegorySoft</Company>
     <Authors>AllegorySoft</Authors>
+    <RepositoryUrl>https://github.com/AllegorySoft/Allegory.EntityRepository.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>Allegory.Standart.Entities</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

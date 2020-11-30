@@ -4,6 +4,12 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Allegory.Standart.EntityFrameworkRepository.pfx</AssemblyOriginatorKeyFile>
+    <Authors>AllegorySoft</Authors>
+    <Company>AllegorySoft</Company>
+    <RepositoryUrl>https://github.com/AllegorySoft/Allegory.EntityRepository.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Allegory.Standart.EntityFrameworkRepository</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
