@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Allegory.NET.EntityFrameworkRepository.Concrete;
 using Allegory.NET.EntityRepository.Tests.EntityFrameworkCore.Configuration;
 using Allegory.NET.EntityRepository.Tests.Setup.Entities;
+using Allegory.Standart.EntityFrameworkRepository.Concrete;
 using Allegory.Standart.EntityRepository.Abstract;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

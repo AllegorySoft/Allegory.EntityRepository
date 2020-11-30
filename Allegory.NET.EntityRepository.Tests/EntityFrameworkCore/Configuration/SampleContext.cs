@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Allegory.EntityRepository.Tests.EntityFramework.Configuration.Mappings;
+﻿using Allegory.EntityRepository.Tests.EntityFramework.Configuration.Mappings;
 using Allegory.NET.EntityRepository.Tests.Setup.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

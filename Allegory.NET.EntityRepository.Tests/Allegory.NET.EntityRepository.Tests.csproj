@@ -27,8 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Allegory.NET.EntityFrameworkRepository\Allegory.NET.EntityFrameworkRepository.csproj" />
     <ProjectReference Include="..\Allegory.Standart.Entities\Allegory.Standart.Entities.csproj" />
+    <ProjectReference Include="..\Allegory.Standart.EntityFrameworkRepository\Allegory.Standart.EntityFrameworkRepository.csproj" />
     <ProjectReference Include="..\Allegory.Standart.EntityRepository\Allegory.Standart.EntityRepository.csproj" />
   </ItemGroup>
 

@@ -7,7 +7,7 @@ using Allegory.Standart.Entities.Concrete;
 using Allegory.Standart.EntityRepository.Abstract;
 using Microsoft.EntityFrameworkCore;
 
-namespace Allegory.NET.EntityFrameworkRepository.Concrete
+namespace Allegory.Standart.EntityFrameworkRepository.Concrete
 {
     public class EntityFrameworkRepositoryBase<TEntity, TContext> : EntityRepositoryBase<TEntity>
       where TEntity : class, IEntity, new()
