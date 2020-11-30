@@ -1,14 +1,11 @@
-﻿using Allegory.EntityRepository.Tests.Setup.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using Allegory.EntityRepository.Tests.Setup.Entities;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Allegory.EntityRepository.Tests.Setup
 {
@@ -26,9 +23,8 @@ namespace Allegory.EntityRepository.Tests.Setup
         [AssemblyCleanup]
         public static void AssemblyCleanup()
         {
-
+          
         }
-
         private static void CreateDatabaseIfNotExists()
         {
             using (var connection = new SqlConnection("Data Source=.;Integrated security=True;"))
